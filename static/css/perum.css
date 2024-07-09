@@ -1,0 +1,73 @@
+body {
+    background-color: black;
+    color: lime;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+nav {
+    background-color: black;
+    border-bottom: 1px dashed lime;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: lime;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid lime;
+    background-color: black;
+    color: lime;
+    width: 150px;
+}
+
+button {
+    padding: 10px 20px;
+    border: 1px solid lime;
+    background-color: black;
+    color: lime;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: lime;
+    color: black;
+}
+
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid lime;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -16,7 +16,7 @@ with open('sentimen.pkl', 'rb') as sentiment_file:
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/clustering')
 def clustering():

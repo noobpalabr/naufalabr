@@ -1,36 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clustering Perumahan</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/perum.css') }}">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Clustering Perum</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('sentimen') }}">Analisis Sentimen</a></li>
-            <li><a href="{{ url_for('clusterperum') }}">Clustering Perum</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <h1>Clustering Perumahan</h1>
-        <form action="/cluster" method="post">
-            <div class="input-group">
-                <input type="text" name="input1" placeholder="Input 1">
-                <input type="text" name="input2" placeholder="Input 2">
-                <input type="text" name="input3" placeholder="Input 3">
-                <input type="text" name="input4" placeholder="Input 4">
-            </div>
-            <button type="submit">Cek</button>
-        </form>
-        <h2>Hasil Analisis</h2>
-        <div class="result">
-            {% if result %}
-                <p>{{ result }}</p>
-            {% endif %}
-        </div>
-    </div>
+    <h1>Clustering Perum</h1>
+    <form action="{{ url_for('cluster') }}" method="post">
+        <label for="input1">Input 1:</label>
+        <input type="text" id="input1" name="input1"><br>
+        <label for="input2">Input 2:</label>
+        <input type="text" id="input2" name="input2"><br>
+        <label for="input3">Input 3:</label>
+        <input type="text" id="input3" name="input3"><br>
+        <label for="input4">Input 4:</label>
+        <input type="text" id="input4" name="input4"><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if result %}
+        <h2>Cluster Result: {{ result }}</h2>
+    {% endif %}
 </body>
 </html>

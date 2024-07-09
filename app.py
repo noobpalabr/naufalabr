@@ -15,7 +15,7 @@ with open('sentimen.pkl', 'rb') as sentiment_file:
     sentiment_model = pickle.load(sentiment_file)
 
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')
 
 @app.route('/clustering')

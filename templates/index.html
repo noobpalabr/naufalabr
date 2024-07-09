@@ -1,34 +1,17 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naufal Abrari</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div class="terminal">
-        <div class="header">
-            <nav>
-                <ul>
-                    <li><a href="{{ url_for('index') }}">Home</a></li>
-                    <li><a href="{{ url_for('sentimen') }}">Analisis Sentimen</a></li>
-                    <li><a href="{{ url_for('clusterperum') }}">Clustering Perum</a></li>
-                </ul>
-            </nav>            
-        </div>
-        <div class="body">
-            <p class="title">&lt;title&gt;Naufal Abrari&lt;/title&gt;</p>
-            <div class="content">
-                <pre>&lt;div class="body"&gt;
-&lt;p class="content"&gt;
-    &lt;p&gt;Selamat datang di naufalabrari.xyz&lt;/p&gt;
-    &lt;p&gt;silahkan menikmati fitur kami.&lt;/p&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-                </pre>
-            </div>
-        </div>
-    </div>
+    <h1>Welcome to the Clustering and Sentiment Analysis App</h1>
+    <ul>
+        <li><a href="{{ url_for('clustering') }}">Clustering Perum</a></li>
+        <li><a href="{{ url_for('sentimen') }}">Sentiment Analysis</a></li>
+    </ul>
 </body>
 </html>

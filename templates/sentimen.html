@@ -1,44 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analisis Sentimen IKD</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/sentimen.css') }}">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div class="header">
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="{{ url_for('sentimen') }}">Analisis Sentimen</a></li>
-                <li><a href="{{ url_for('clusterperum') }}">Clustering Perum</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="container">
-        <h1>ANALISIS SENTIMEN IKD</h1>
-        <div class="box">
-            <form action="/predict" method="post">
-                <textarea name="texts" placeholder="Paste Here...."></textarea><br><br>
-                <button type="submit" class="btn">Cek</button>
-            </form>
-        </div>
-        <h2>Hasil Analisis</h2>
-        <div id="result">
-            {% if predictions %}
-                <ul>
-                    {% for prediction in predictions %}
-                        <li>{{ prediction }}</li>
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <p>Belum ada hasil analisis.</p>
-            {% endif %}
-        </div>
-    </div>
-    <div class="footer">
-        <p>&copy; Naufal Abrari 2024</p>
-    </div>
-</body>
-</html>
+    <h1>Sentiment Analysis</h1>
+    <form action="{{ url_for('analyze_sentimen') }}" method="post">
+        <label for="text">Text:</label
